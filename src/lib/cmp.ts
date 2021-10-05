@@ -5,6 +5,9 @@ const getType = (x: any) => {
     if (typeof x === "number") {
         return "Number";
     }
+    if (typeof x === "boolean") {
+        return "Boolean";
+    }
     if (x instanceof Date) {
         return "Date";
     }

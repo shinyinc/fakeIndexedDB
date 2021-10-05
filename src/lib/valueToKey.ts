@@ -8,6 +8,8 @@ const valueToKey = (input: any, seen?: Set<object>): Key | Key[] => {
             throw new DataError();
         }
         return input;
+    } else if (typeof input === "boolean") {
+        return input;
     } else if (input instanceof Date) {
         const ms = input.valueOf();
         if (isNaN(ms)) {
